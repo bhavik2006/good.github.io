@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impress Your Love</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Hi Love! 🥰</h1>
+        <p>Answer these simple questions to unlock a special message! ❤️</p>
+        
+        <div class="quiz">
+            <div class="question">
+                <label>1. What is my favorite color?</label>
+                <input type="text" id="q1">
+            </div>
+            <div class="question">
+                <label>2. What's your favorite food?</label>
+                <input type="text" id="q2">
+            </div>
+            <div class="question">
+                <label>3. Who is your first love? 😉</label>
+                <input type="text" id="q3">
+            </div>
+            <div class="question">
+                <label>4. Where do you want to travel with me?</label>
+                <input type="text" id="q4">
+            </div>
+            <div class="question">
+                <label>5. What makes you happiest about us?</label>
+                <input type="text" id="q5">
+            </div>
+            <div class="question">
+                <label>6. What's my nickname for you? 😘</label>
+                <input type="text" id="q6">
+            </div>
+            <button onclick="checkAnswers()">Submit</button>
+        </div>
+        
+        <div id="message" class="hidden">
+            <h2>I Am So Sorry! 💔</h2>
+            <p>Mujhse jo bhi galti hui, uske liye sorry... Aur mujhe samajhne ki koshish karne ke liye dil se thanks! ❤️ Tum meri life ka sabse khaas hissa ho. 💕</p>
+            <h3>Your love🫶</h3>
+        </div>
+    </div>
+
+    <audio id="bg-music" src="css/song.mp3" preload="auto"></audio>
+
+    <script>
+        function checkAnswers() {
+            const music = document.getElementById('bg-music');
+            music.play();
+            document.querySelector('.quiz').classList.add('hidden');
+            document.getElementById('message').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
+
+
